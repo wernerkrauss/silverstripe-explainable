@@ -22,6 +22,7 @@
 		"composer/installers": "*"
 	},
 	"suggest": {
+		"silverstripe/googlesitemaps": "create and add DataObjects to a sitemap.xml"
 	},
 	"extra": {
 		"installer-name": "explainable"

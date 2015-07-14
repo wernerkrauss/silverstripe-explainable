@@ -25,7 +25,16 @@ You can link to this abbreviations in the CMS using the bundled shortcodes, use 
 The listings page lists all abbreviations or explanations in alphabetical order, grouped by first letter. You might update 
 the templates to fit your needs.
 
+### Adding to Google Sitemap
+
+You can add the abbreviations and explanations to google sitemap if you have the GoogleSitemap module installed. Just 
+add to your `mysite/_config.php`: 
+
+```
+GoogleSitemap::register_dataobject('Abbreviation', 'weekly', '0.5');
+GoogleSitemap::register_dataobject('Explanation', 'weekly', '0.5');
+```
+
 ## TODO
-* include in google sitemaps (configurable?)
 * create new abbreviation or explanation directly in shortcode UI? Using AddNew button this could be possible.
   Maybe we have to tweak shortcodable controller for that?
