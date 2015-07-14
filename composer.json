@@ -19,6 +19,7 @@
 		"silverstripe/framework": "3.*",
 		"silverstripe/cms": "3.*",
 		"sheadawson/silverstripe-shortcodable": "0.1.x@stable",
+		"sheadawson/quickaddnew": "1.1.x@stable",
 		"composer/installers": "*"
 	},
 	"suggest": {

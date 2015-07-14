@@ -2,5 +2,6 @@
 Name: explainable-config
 ---
 
-Abbreviation:
-  singular_name: 'Abbreviation'
+ShortcodableController:
+  extensions:
+    - ShortCodeAddNewExtension
