@@ -1,0 +1,26 @@
+en:
+  Abbreviation:
+    __PLURALNAME: Abbreviations
+    __SINGULARNAME: Abbreviation
+    __db_Description: Description
+    __db_Explanation: Explanation
+    __db_Title: Title
+    __db_URLSlug: URLSlug
+    __has_one_Page: Page
+  AbbreviationPage:
+    __DESCRIPTION: 'Generic content page'
+    __PLURALNAME: 'Abbreviation Pages'
+    __SINGULARNAME: 'Abbreviation Page'
+    __ViewMore: 'Go to abbreviations page'
+    __has_many_Abbreviations: Abbreviations
+  Explanation:
+    __PLURALNAME: Explanations
+    __READMORE: 'read explanation for ''{title}'''
+    __SINGULARNAME: Explanation
+  ExplanationPage:
+    __DESCRIPTION: 'Generic content page'
+    __PLURALNAME: 'Explanation Pages'
+    __SINGULARNAME: 'Explanation Page'
+    __ViewMore: 'Go to explanation page'
+    __has_many_Explanations: Explanations
+

@@ -1,0 +1,26 @@
+de:
+  Abbreviation:
+    PLURALNAME: Abkürzungen
+    SINGULARNAME: Abkürzung
+    db_Description: Beschreibung
+    db_Explanation: Erklärung
+    db_Title: Titel
+    db_URLSlug: URLSlug
+    has_one_Page: Seite
+  AbbreviationPage:
+    DESCRIPTION: 'Abkürzungsseite'
+    PLURALNAME: 'Abkürzungsseiten'
+    SINGULARNAME: 'Abkürzungsseite'
+    ViewMore: 'Zu den Abkürzungen'
+    has_many_Abbreviations: Abkürzungen
+  Explanation:
+    PLURALNAME: Erklärungen
+    READMORE: 'Zur Erklärung von ''{title}'''
+    SINGULARNAME: Erklärung
+  ExplanationPage:
+    DESCRIPTION: 'Liste von Erklärungen'
+    PLURALNAME: 'Erklärungsseiten'
+    SINGULARNAME: 'Erklärungsseite'
+    ViewMore: 'Zu den Erklärungen'
+    has_many_Explanations: Erklärungen
+

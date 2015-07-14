@@ -1,0 +1,29 @@
+{
+	"name": "wernerkrauss/explainable",
+	"description": "Silverstripe module for managing abbreviations and unusal words using shortcodes. Good for web accesibility.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "accessibility"],
+	"license": "MIT",
+	"authors": [
+	{
+		"name": "Werner Krauß",
+		"email": "werner.krauss@netwerkstatt.at",
+		"homepage": "http://www.netwerkstatt.at",
+		"role": "Developer"
+	}
+	],
+	"support": {
+		"issues": "https://github.com/wernerkrauss/silverstripe-explainable/issues"
+	},
+	"require": {
+		"silverstripe/framework": "3.*",
+		"silverstripe/cms": "3.*",
+		"sheadawson/silverstripe-shortcodable": "0.1.x@stable",
+		"composer/installers": "*"
+	},
+	"suggest": {
+	},
+	"extra": {
+		"installer-name": "explainable"
+	}
+}
