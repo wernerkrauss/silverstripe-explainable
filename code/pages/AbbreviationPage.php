@@ -60,15 +60,6 @@ class AbbreviationPage_Controller extends ContentController {
 		return Abbreviation::get()->sort('Title');
 	}
 
-	public function Link($action = null) {
-		return Controller::join_links('/', $this->config()->get('url_segment'), $action);
-	}
-
-	function AbsoluteLink() {
-		return Director::absoluteURL($this->Link());
-	}
-
-
 	public function getGroupedItems() {
 		return GroupedList::create($this->getItems());
 	}
@@ -89,8 +80,8 @@ class AbbreviationPage_Controller extends ContentController {
 					array('Title' => $firstLetter, 'hasItems' => true)
 				);
 			}
-
 		}
+
 		ksort($menu);
 
 		return ArrayList::create($menu);
