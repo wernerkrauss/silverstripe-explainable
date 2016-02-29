@@ -15,6 +15,10 @@ See https://www.wuhcag.com/abbreviations/ and https://www.wuhcag.com/unusual-wor
 
 Download and install manually or use composer.
 
+```
+composer require wernerkrauss/explainable
+```
+
 ## Configuration
 
 Add a page of type "AbbrevationPage" or "ExplanationPage" to your CMS. There you can add new abbreviations or explanations
