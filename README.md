@@ -1,5 +1,6 @@
 silverstripe-explainable
 ==========================
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/wernerkrauss/silverstripe-explainable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/wernerkrauss/silverstripe-explainable/?branch=master)
 
 Silverstripe module for managing Abbreviations and unusal words using shortcodes. Good for web accesibility.
 
