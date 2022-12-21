@@ -1,6 +1,6 @@
 <?php
 
-class Abbreviation extends DataObject implements Shortcodable
+class Abbreviation extends DataObject
 {
 
     private static $db = array(
@@ -125,12 +125,4 @@ class Abbreviation extends DataObject implements Shortcodable
         return $template->process($abbreviation);
     }
 
-    /**
-     * returns a list of fields for editing the shortcode's attributes
-     * @return Fieldlist
-     **/
-    public static function shortcode_attribute_fields()
-    {
-        //@todo use addnew field to add a new abbr. on the fly
-    }
 }
