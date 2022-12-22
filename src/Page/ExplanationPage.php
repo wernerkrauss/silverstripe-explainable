@@ -3,8 +3,12 @@
 namespace Netwerkstatt\Explainable\Page;
 
 use Page;
-use GridFieldConfig_RecordEditor;
-use GridField;
+
+
+use Netwerkstatt\Explainable\Model\Explanation;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+
 
 
 
@@ -12,7 +16,7 @@ class ExplanationPage extends Page
 {
 
     public static $has_many = array(
-        'Explanations' => 'Explanation'
+        'Explanations' => Explanation::class
     );
 
 

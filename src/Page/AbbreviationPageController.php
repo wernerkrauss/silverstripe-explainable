@@ -2,11 +2,18 @@
 
 namespace Netwerkstatt\Explainable\Page;
 
-use ContentController;
-use Abbreviation;
-use GroupedList;
-use ArrayData;
-use ArrayList;
+
+
+
+
+
+use Netwerkstatt\Explainable\Page\AbbreviationPage;
+use Netwerkstatt\Explainable\Model\Abbreviation;
+use SilverStripe\ORM\GroupedList;
+use SilverStripe\View\ArrayData;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\CMS\Controllers\ContentController;
+
 
 
 class AbbreviationPageController extends ContentController
@@ -21,7 +28,7 @@ class AbbreviationPageController extends ContentController
 
     public function index()
     {
-        return $this->renderWith(array('AbbreviationPage', 'Page'));
+        return $this->renderWith(array(AbbreviationPage::class, 'Page'));
     }
 
     public function viewItem()

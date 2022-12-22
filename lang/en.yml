@@ -1,5 +1,5 @@
 en:
-  Abbreviation:
+  Netwerkstatt\Explainable\Model\Abbreviation:
     DESCRIPTION: Description
     EXPLANATION: Explanation
     PLURALNAME: Abbreviations
@@ -9,19 +9,19 @@ en:
     db_Title: Title
     db_URLSlug: URLSlug
     has_one_Page: Page
-  AbbreviationPage:
-    __DESCRIPTION: 'Generic content page'
-    PLURALNAME: 'Abbreviation Pages'
-    SINGULARNAME: 'Abbreviation Page'
-    ViewMore: 'Go to abbreviations page'
-    has_many_Abbreviations: Abbreviations
-  Explanation:
+  Netwerkstatt\Explainable\Model\Explanation:
     PLURALNAME: Explanations
     READMORE: 'read explanation for ''{title}'''
     SINGULARNAME: Explanation
-  ExplanationPage:
+  Netwerkstatt\Explainable\Page\AbbreviationPage:
+    PLURALNAME: 'Abbreviation Pages'
+    SINGULARNAME: 'Abbreviation Page'
+    ViewMore: 'Go to abbreviations page'
     __DESCRIPTION: 'Generic content page'
+    has_many_Abbreviations: Abbreviations
+  Netwerkstatt\Explainable\Page\ExplanationPage:
     PLURALNAME: 'Explanation Pages'
     SINGULARNAME: 'Explanation Page'
     ViewMore: 'Go to explanation page'
+    __DESCRIPTION: 'Generic content page'
     has_many_Explanations: Explanations

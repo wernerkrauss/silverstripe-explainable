@@ -2,34 +2,35 @@
 
 namespace Netwerkstatt\Explainable\Model;
 
-use DataObject;
-use URLSegmentFilter;
-use Controller;
-use Director;
-use SSViewer;
+
+use SilverStripe\View\Parsers\URLSegmentFilter;
+use SilverStripe\Control\Controller;
+use SilverStripe\Control\Director;
+use SilverStripe\View\SSViewer;
+use SilverStripe\ORM\DataObject;
 
 
 class Abbreviation extends DataObject
 {
 
-    private static $db = array(
+    private static $db = [
         'Title' => 'Varchar(255)',
         'Description' => 'Varchar(255)',
         'URLSlug' => 'Varchar(255)',
         'Explanation' => 'HTMLText'
-    );
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         'Page' => 'Page'
-    );
+    ];
 
     private static $singular_name = 'Abbreviation';
 
     private static $plural_name = 'Abbreviations';
 
-    private static $summary_fields = array('Title', 'Description');
+    private static $summary_fields = ['Title', 'Description'];
 
-    private static $searchable_fields = array('Title', 'Description');
+    private static $searchable_fields = ['Title', 'Description'];
 
     public function getCMSFields()
     {
@@ -41,7 +42,7 @@ class Abbreviation extends DataObject
     /**
      * Taken from https://github.com/NightJar/ssrigging-slug/blob/master/code/Slug.php
      */
-    public function Slug($regen=false)
+    public function Slug($regen = false)
     {
         $existing = $this->URLSlug;
         return $existing && !$regen ? $existing : URLSegmentFilter::create()->filter($this->Title);
@@ -56,13 +57,13 @@ class Abbreviation extends DataObject
         if ($this->isChanged('URLSlug') || !$this->URLSlug || $this->isChanged($this->Title)) {
             $this->URLSlug = $this->Slug();
             $class = $this->class;
-            $filter = array('URLSlug' => $this->URLSlug);
+            $filter = ['URLSlug' => $this->URLSlug];
             if ($parent = $this->parentRel) {
                 $filter[$parent] = $this->$parent;
             }
             $count = 1;
             while ($exists = $class::get()->filter($filter)->exclude('ID', $this->ID)->exists()) {
-                $this->URLSlug = $this->URLSlug.$count++;
+                $this->URLSlug = $this->URLSlug . $count++;
                 $filter['URLSlug'] = $this->URLSlug;
             }
         }
@@ -80,7 +81,7 @@ class Abbreviation extends DataObject
 
     public function forTemplate()
     {
-        $template = new SSViewer('Abbreviation');
+        $template = new SSViewer(__CLASS__);
         return $template->process($this);
     }
 

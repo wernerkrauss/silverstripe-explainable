@@ -2,7 +2,9 @@
 
 namespace Netwerkstatt\Explainable\Model;
 
-use SSViewer;
+
+use SilverStripe\View\SSViewer;
+
 
 
 class Explanation extends Abbreviation
@@ -16,7 +18,7 @@ class Explanation extends Abbreviation
 
     public function forTemplate()
     {
-        $template = new SSViewer('Explanation');
+        $template = new SSViewer(__CLASS__);
         return $template->process($this);
     }
 

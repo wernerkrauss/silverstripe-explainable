@@ -3,10 +3,16 @@
 namespace Netwerkstatt\Explainable\Page;
 
 use Page;
-use GridFieldConfig_RecordEditor;
-use GridField;
-use ArrayList;
-use Controller;
+
+
+
+
+use Netwerkstatt\Explainable\Model\Abbreviation;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\Control\Controller;
+
 
 
 
@@ -14,7 +20,7 @@ class AbbreviationPage extends Page
 {
 
     public static $has_many = array(
-        'Abbreviations' => 'Abbreviation'
+        'Abbreviations' => Abbreviation::class
     );
 
     public function getCMSFields()
