@@ -1,5 +1,12 @@
 <?php
 
+namespace Netwerkstatt\Explainable\Page;
+
+use Page;
+use GridFieldConfig_RecordEditor;
+use GridField;
+
+
 
 class ExplanationPage extends Page
 {

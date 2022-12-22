@@ -1,5 +1,14 @@
 <?php
 
+namespace Netwerkstatt\Explainable\Model;
+
+use DataObject;
+use URLSegmentFilter;
+use Controller;
+use Director;
+use SSViewer;
+
+
 class Abbreviation extends DataObject
 {
 

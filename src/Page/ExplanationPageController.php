@@ -1,5 +1,10 @@
 <?php
 
+namespace Netwerkstatt\Explainable\Page;
+
+use Explanation;
+
+
 class ExplanationPageController extends AbbreviationPageController
 {
     private static $url_handlers = array(

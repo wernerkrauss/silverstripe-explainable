@@ -1,5 +1,14 @@
 <?php
 
+namespace Netwerkstatt\Explainable\Page;
+
+use Page;
+use GridFieldConfig_RecordEditor;
+use GridField;
+use ArrayList;
+use Controller;
+
+
 
 class AbbreviationPage extends Page
 {

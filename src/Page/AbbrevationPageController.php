@@ -1,5 +1,14 @@
 <?php
 
+namespace Netwerkstatt\Explainable\Page;
+
+use ContentController;
+use Abbreviation;
+use GroupedList;
+use ArrayData;
+use ArrayList;
+
+
 class AbbreviationPageController extends ContentController
 {
 

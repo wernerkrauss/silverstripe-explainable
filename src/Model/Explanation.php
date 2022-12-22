@@ -1,5 +1,10 @@
 <?php
 
+namespace Netwerkstatt\Explainable\Model;
+
+use SSViewer;
+
+
 class Explanation extends Abbreviation
 {
 

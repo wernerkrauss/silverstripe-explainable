@@ -1,0 +1,7 @@
+mappings:
+  Explanation: Netwerkstatt\Explainable\Model\Explanation
+  Abbreviation: Netwerkstatt\Explainable\Model\Abbreviation
+  ExplanationPageController: Netwerkstatt\Explainable\Page\ExplanationPageController
+  AbbreviationPageController: Netwerkstatt\Explainable\Page\AbbreviationPageController
+  AbbreviationPage: Netwerkstatt\Explainable\Page\AbbreviationPage
+  ExplanationPage: Netwerkstatt\Explainable\Page\ExplanationPage
