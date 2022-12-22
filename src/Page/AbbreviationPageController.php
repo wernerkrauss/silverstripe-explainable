@@ -12,17 +12,13 @@ use SilverStripe\CMS\Controllers\ContentController;
 class AbbreviationPageController extends ContentController
 {
 
-    private static $url_handlers = array(
-        '$Item!' => 'viewItem'
-    );
+    private static $url_handlers = ['$Item!' => 'viewItem'];
 
-    private static $allowed_actions = array(
-        'viewItem'
-    );
+    private static $allowed_actions = ['viewItem'];
 
     public function index()
     {
-        return $this->renderWith(array(AbbreviationPage::class, 'Page'));
+        return $this->renderWith([AbbreviationPage::class, 'Page']);
     }
 
     public function viewItem()
@@ -32,12 +28,12 @@ class AbbreviationPageController extends ContentController
             $this->httpError(404);
         }
 
-        return $this->customise(array('Item' => $item))->renderWith(array('AbbreviationPage_view', 'Page'));
+        return $this->customise(['Item' => $item])->renderWith(['AbbreviationPage_view', 'Page']);
     }
 
     public function getItem($slug)
     {
-        return Abbreviation::get()->filter(array('URLSlug' => $slug))->first();
+        return Abbreviation::get()->filter(['URLSlug' => $slug])->first();
     }
 
     public function getItems()
@@ -52,9 +48,9 @@ class AbbreviationPageController extends ContentController
 
     public function getFirstLetterNavigation()
     {
-        $menu = array();
+        $menu = [];
         foreach (range('A', 'Z') as $char) {
-            $menu[$char] = ArrayData::create(array('Title' => $char));
+            $menu[$char] = ArrayData::create(['Title' => $char]);
         }
 
         foreach ($this->getGroupedItems()->GroupedBy('TitleFirstLetter') as $item) {
@@ -64,7 +60,7 @@ class AbbreviationPageController extends ContentController
                 $menu[$firstLetter]->setField('hasItems', true);
             } else {
                 $menu[$firstLetter] = ArrayData::create(
-                    array('Title' => $firstLetter, 'hasItems' => true)
+                    ['Title' => $firstLetter, 'hasItems' => true]
                 );
             }
         }

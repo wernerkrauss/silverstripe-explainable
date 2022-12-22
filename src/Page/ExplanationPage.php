@@ -12,11 +12,9 @@ use SilverStripe\Forms\GridField\GridField;
 class ExplanationPage extends Page
 {
 
-    private static $table_name = 'ExplanationPage';
+    private static string $table_name = 'ExplanationPage';
 
-    public static $has_many = array(
-        'Explanations' => Explanation::class
-    );
+    public static $has_many = ['Explanations' => Explanation::class];
 
 
     public function getCMSFields()

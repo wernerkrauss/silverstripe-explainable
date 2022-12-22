@@ -6,13 +6,9 @@ use Netwerkstatt\Explainable\Model\Explanation;
 
 class ExplanationPageController extends AbbreviationPageController
 {
-    private static $url_handlers = array(
-        '$Item!' => 'viewItem'
-    );
+    private static $url_handlers = ['$Item!' => 'viewItem'];
 
-    private static $allowed_actions = array(
-        'viewItem'
-    );
+    private static $allowed_actions = ['viewItem'];
 
     public function viewItem()
     {
@@ -21,12 +17,12 @@ class ExplanationPageController extends AbbreviationPageController
             $this->httpError(404);
         }
 
-        return $this->customise(array('Item' => $item))->renderWith(array('ExplanationPage_view', 'Page'));
+        return $this->customise(['Item' => $item])->renderWith(['ExplanationPage_view', 'Page']);
     }
 
     public function getItem($slug)
     {
-        return Explanation::get()->filter(array('URLSlug' => $slug))->first();
+        return Explanation::get()->filter(['URLSlug' => $slug])->first();
     }
 
     public function getItems()

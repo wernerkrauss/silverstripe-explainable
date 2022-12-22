@@ -17,7 +17,7 @@ class Explanation extends Abbreviation
 
     public function forTemplate()
     {
-        $template = \SilverStripe\View\SSViewer::create(__CLASS__);
+        $template = \SilverStripe\View\SSViewer::create(self::class);
         return $template->process($this);
     }
 

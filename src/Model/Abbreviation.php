@@ -82,7 +82,7 @@ class Abbreviation extends DataObject
 
     public function forTemplate()
     {
-        $template = \SilverStripe\View\SSViewer::create(__CLASS__);
+        $template = \SilverStripe\View\SSViewer::create(self::class);
         return $template->process($this);
     }
 
