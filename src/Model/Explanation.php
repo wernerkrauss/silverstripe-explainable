@@ -8,6 +8,8 @@ class Explanation extends Abbreviation
 {
 
 
+    private static $table_name = 'Explanation';
+
     private static $singular_name = 'Explanation';
 
     private static $plural_name = 'Explanations';
@@ -15,7 +17,7 @@ class Explanation extends Abbreviation
 
     public function forTemplate()
     {
-        $template = new SSViewer(__CLASS__);
+        $template = \SilverStripe\View\SSViewer::create(__CLASS__);
         return $template->process($this);
     }
 
@@ -45,7 +47,7 @@ class Explanation extends Abbreviation
             $explanation->Title = $arguments['title'];
         }
 
-        $template = new SSViewer('ExplanationShortcode');
+        $template = \SilverStripe\View\SSViewer::create('ExplanationShortcode');
         return $template->process($explanation);
     }
 }

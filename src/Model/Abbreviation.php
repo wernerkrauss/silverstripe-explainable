@@ -11,6 +11,8 @@ use SilverStripe\ORM\DataObject;
 class Abbreviation extends DataObject
 {
 
+    private static $table_name = 'Abbreviation';
+
     private static $db = [
         'Title' => 'Varchar(255)',
         'Description' => 'Varchar(255)',
@@ -79,7 +81,7 @@ class Abbreviation extends DataObject
 
     public function forTemplate()
     {
-        $template = new SSViewer(__CLASS__);
+        $template = \SilverStripe\View\SSViewer::create(__CLASS__);
         return $template->process($this);
     }
 
@@ -129,7 +131,7 @@ class Abbreviation extends DataObject
             $abbreviation->Title = $arguments['title'];
         }
 
-        $template = new SSViewer('AbbreviationShortcode');
+        $template = \SilverStripe\View\SSViewer::create('AbbreviationShortcode');
         return $template->process($abbreviation);
     }
 }

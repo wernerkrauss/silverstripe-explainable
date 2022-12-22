@@ -16,6 +16,8 @@ use SilverStripe\Control\Controller;
 class AbbreviationPage extends Page
 {
 
+    private static $table_name = 'AbbreviationPage';
+
     public static $has_many = array(
         'Abbreviations' => Abbreviation::class
     );
