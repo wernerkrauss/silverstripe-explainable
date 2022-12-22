@@ -1,6 +1,5 @@
 <?php
 
-use src\Page;
 
 class AbbreviationPage extends Page
 {

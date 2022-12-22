@@ -1,6 +1,5 @@
 <?php
 
-use src\Page;
 
 class ExplanationPage extends Page
 {
