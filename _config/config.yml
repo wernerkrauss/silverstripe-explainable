@@ -1,6 +1,5 @@
 ---
 Name: explainable-config
 ---
-
-Abbreviation:
-  singular_name: 'Abbreviation'
+Netwerkstatt\Explainable\Model\Abbreviation:
+  singular_name: Abbreviation
