@@ -39,7 +39,7 @@ class Explanation extends Abbreviation
             $explanation = Explanation::get()->byID($arguments['id']);
         }
 
-        if (!$explanation) {
+        if (!$explanation instanceof \SilverStripe\ORM\DataObject) {
             return;
         }
 

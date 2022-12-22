@@ -9,6 +9,7 @@ class ExplanationPageController extends AbbreviationPageController
     private static $url_handlers = array(
         '$Item!' => 'viewItem'
     );
+
     private static $allowed_actions = array(
         'viewItem'
     );
@@ -19,6 +20,7 @@ class ExplanationPageController extends AbbreviationPageController
         if (!$item) {
             $this->httpError(404);
         }
+
         return $this->customise(array('Item' => $item))->renderWith(array('ExplanationPage_view', 'Page'));
     }
 

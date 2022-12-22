@@ -51,7 +51,7 @@ class Abbreviation extends DataObject
     /**
      * Taken from https://github.com/NightJar/ssrigging-slug/blob/master/code/Slug.php
      */
-    public function onBeforeWrite()
+    protected function onBeforeWrite()
     {
         parent::onBeforeWrite();
         if ($this->isChanged('URLSlug') || !$this->URLSlug || $this->isChanged($this->Title)) {
@@ -61,9 +61,10 @@ class Abbreviation extends DataObject
             if ($parent = $this->parentRel) {
                 $filter[$parent] = $this->$parent;
             }
+
             $count = 1;
             while ($exists = $class::get()->filter($filter)->exclude('ID', $this->ID)->exists()) {
-                $this->URLSlug = $this->URLSlug . $count++;
+                $this->URLSlug .= $count++;
                 $filter['URLSlug'] = $this->URLSlug;
             }
         }
@@ -123,7 +124,7 @@ class Abbreviation extends DataObject
             $abbreviation = Abbreviation::get()->byID($arguments['id']);
         }
 
-        if (!$abbreviation) {
+        if (!$abbreviation instanceof \SilverStripe\ORM\DataObject) {
             return;
         }
 

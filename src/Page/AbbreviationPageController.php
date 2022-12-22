@@ -15,6 +15,7 @@ class AbbreviationPageController extends ContentController
     private static $url_handlers = array(
         '$Item!' => 'viewItem'
     );
+
     private static $allowed_actions = array(
         'viewItem'
     );
@@ -30,6 +31,7 @@ class AbbreviationPageController extends ContentController
         if (!$item) {
             $this->httpError(404);
         }
+
         return $this->customise(array('Item' => $item))->renderWith(array('AbbreviationPage_view', 'Page'));
     }
 

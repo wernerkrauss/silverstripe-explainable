@@ -42,11 +42,12 @@ class AbbreviationPage extends Page
     {
         $pages = ArrayList::create();
         $currentController = Controller::curr();
-        $slug = $currentController->request->param('Item');
+        $slug = $currentController->getRequest()->param('Item');
         $item = ($slug && $currentController->hasMethod('getItem')) ? $currentController->getItem($slug) : false;
         if ($slug && $item) {
             $pages->push($item);
         }
+
         return $pages;
     }
 }
