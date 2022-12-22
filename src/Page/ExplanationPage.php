@@ -14,7 +14,7 @@ class ExplanationPage extends Page
 
     private static string $table_name = 'ExplanationPage';
 
-    public static $has_many = ['Explanations' => Explanation::class];
+    private static $has_many = ['Explanations' => Explanation::class];
 
 
     public function getCMSFields()
