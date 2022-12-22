@@ -16,9 +16,14 @@
 		"issues": "https://github.com/wernerkrauss/silverstripe-explainable/issues"
 	},
 	"require": {
-		"silverstripe/cms": "3.*",
-		"sheadawson/silverstripe-shortcodable": "^3.1"
+		"silverstripe/cms": "^4",
+		"sheadawson/silverstripe-shortcodable": "^4"
 	},
+    "autoload": {
+        "psr-4": {
+            "Netwerkstatt\\Explainable\\": "src/"
+        }
+    },
 	"suggest": {
 		"silverstripe/googlesitemaps": "create and add DataObjects to a sitemap.xml"
 	},
