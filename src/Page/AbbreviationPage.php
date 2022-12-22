@@ -18,7 +18,7 @@ class AbbreviationPage extends Page
 
     private static string $table_name = 'AbbreviationPage';
 
-    public static $has_many = ['Abbreviations' => Abbreviation::class];
+    private static $has_many = ['Abbreviations' => Abbreviation::class];
 
     public function getCMSFields()
     {
