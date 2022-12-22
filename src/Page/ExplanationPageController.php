@@ -2,10 +2,7 @@
 
 namespace Netwerkstatt\Explainable\Page;
 
-
 use Netwerkstatt\Explainable\Model\Explanation;
-
-
 
 class ExplanationPageController extends AbbreviationPageController
 {

@@ -2,19 +2,12 @@
 
 namespace Netwerkstatt\Explainable\Page;
 
-
-
-
-
-
 use Netwerkstatt\Explainable\Page\AbbreviationPage;
 use Netwerkstatt\Explainable\Model\Abbreviation;
 use SilverStripe\ORM\GroupedList;
 use SilverStripe\View\ArrayData;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\CMS\Controllers\ContentController;
-
-
 
 class AbbreviationPageController extends ContentController
 {
@@ -79,4 +72,3 @@ class AbbreviationPageController extends ContentController
         return ArrayList::create($menu);
     }
 }
-

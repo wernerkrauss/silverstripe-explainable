@@ -9,9 +9,6 @@ use Netwerkstatt\Explainable\Model\Explanation;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
 
-
-
-
 class ExplanationPage extends Page
 {
 
@@ -32,4 +29,3 @@ class ExplanationPage extends Page
         return $fields;
     }
 }
-

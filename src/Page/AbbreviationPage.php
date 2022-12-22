@@ -13,9 +13,6 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\Control\Controller;
 
-
-
-
 class AbbreviationPage extends Page
 {
 
@@ -51,4 +48,3 @@ class AbbreviationPage extends Page
         return $pages;
     }
 }
-

@@ -2,13 +2,11 @@
 
 namespace Netwerkstatt\Explainable\Model;
 
-
 use SilverStripe\View\Parsers\URLSegmentFilter;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
 use SilverStripe\View\SSViewer;
 use SilverStripe\ORM\DataObject;
-
 
 class Abbreviation extends DataObject
 {
@@ -134,5 +132,4 @@ class Abbreviation extends DataObject
         $template = new SSViewer('AbbreviationShortcode');
         return $template->process($abbreviation);
     }
-
 }
