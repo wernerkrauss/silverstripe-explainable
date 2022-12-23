@@ -1,0 +1,9 @@
+---
+Name: explainable-legacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    Explanation: Netwerkstatt\Explainable\Model\Explanation
+    Abbreviation: Netwerkstatt\Explainable\Model\Abbreviation
+    AbbreviationPage: Netwerkstatt\Explainable\Page\AbbreviationPage
+    ExplanationPage: Netwerkstatt\Explainable\Page\ExplanationPage
