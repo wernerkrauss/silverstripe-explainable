@@ -2,6 +2,8 @@
 
 namespace Netwerkstatt\Explainable\Model;
 
+use SilverStripe\ORM\FieldType\DBField;
+use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\View\Parsers\URLSegmentFilter;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
@@ -82,7 +84,7 @@ class Abbreviation extends DataObject
 
     public function forTemplate()
     {
-        $template = \SilverStripe\View\SSViewer::create(self::class);
+        $template = SSViewer::create(self::class);
         return $template->process($this);
     }
 
@@ -132,7 +134,7 @@ class Abbreviation extends DataObject
             $abbreviation->Title = $arguments['title'];
         }
 
-        $template = \SilverStripe\View\SSViewer::create('AbbreviationShortcode');
+        $template = SSViewer::create('Netwerkstatt/Explainable/Layout/AbbreviationShortcode');
         return $template->process($abbreviation);
     }
 }
