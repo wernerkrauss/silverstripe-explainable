@@ -8,10 +8,19 @@ class Explanation extends Abbreviation
 {
 
 
+    /**
+     * @config
+     */
     private static $table_name = 'Explanation';
 
+    /**
+     * @config
+     */
     private static $singular_name = 'Explanation';
 
+    /**
+     * @config
+     */
     private static $plural_name = 'Explanations';
 
 

@@ -13,8 +13,14 @@ use SilverStripe\ORM\DataObject;
 class Abbreviation extends DataObject
 {
 
+    /**
+     * @config
+     */
     private static $table_name = 'Abbreviation';
 
+    /**
+     * @config
+     */
     private static $db = [
         'Title' => 'Varchar(255)',
         'Description' => 'Varchar(255)',
@@ -22,16 +28,31 @@ class Abbreviation extends DataObject
         'Explanation' => 'HTMLText'
     ];
 
+    /**
+     * @config
+     */
     private static $has_one = [
         'Page' => 'Page'
     ];
 
+    /**
+     * @config
+     */
     private static $singular_name = 'Abbreviation';
 
+    /**
+     * @config
+     */
     private static $plural_name = 'Abbreviations';
 
+    /**
+     * @config
+     */
     private static $summary_fields = ['Title', 'Description'];
 
+    /**
+     * @config
+     */
     private static $searchable_fields = ['Title', 'Description'];
 
     public function getCMSFields()

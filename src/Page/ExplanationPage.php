@@ -12,8 +12,14 @@ use SilverStripe\Forms\GridField\GridField;
 class ExplanationPage extends Page
 {
 
+    /**
+     * @config
+     */
     private static string $table_name = 'ExplanationPage';
 
+    /**
+     * @config
+     */
     private static $has_many = ['Explanations' => Explanation::class];
 
 

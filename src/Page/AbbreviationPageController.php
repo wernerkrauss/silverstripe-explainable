@@ -12,8 +12,14 @@ use SilverStripe\CMS\Controllers\ContentController;
 class AbbreviationPageController extends ContentController
 {
 
+    /**
+     * @config
+     */
     private static $url_handlers = ['$Item!' => 'viewItem'];
 
+    /**
+     * @config
+     */
     private static $allowed_actions = ['viewItem'];
 
     public function index()

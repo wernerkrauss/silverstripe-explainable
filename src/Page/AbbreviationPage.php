@@ -16,8 +16,14 @@ use SilverStripe\Control\Controller;
 class AbbreviationPage extends Page
 {
 
+    /**
+     * @config
+     */
     private static string $table_name = 'AbbreviationPage';
 
+    /**
+     * @config
+     */
     private static $has_many = ['Abbreviations' => Abbreviation::class];
 
     public function getCMSFields()
